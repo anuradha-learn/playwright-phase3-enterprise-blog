@@ -6,12 +6,18 @@ dotenv.config({ quiet: true })
 
 
 // Validate required variables at startup
+// if (!process.env.BASE_URL) throw new Error('BASE_URL is not set in .env');
+// if (!process.env.DEMO_USER) throw new Error('DEMO_USER is not set in .env');
+// if (!process.env.DEMO_PASS) throw new Error('DEMO_PASS is not set in .env');
+// if (!process.env.API_BASE_URL) throw new Error('API_BASE_URL is not set in .env');
+// Validate required variables at startup
 if (!process.env.BASE_URL) throw new Error('BASE_URL is not set in .env');
-if (!process.env.DEMO_USER) throw new Error('DEMO_USER is not set in .env');
-if (!process.env.DEMO_PASS) throw new Error('DEMO_PASS is not set in .env');
 if (!process.env.API_BASE_URL) throw new Error('API_BASE_URL is not set in .env');
 
-
+if (!process.env.TEST_USER_1_EMAIL) throw new Error('TEST_USER_1_EMAIL is not set in .env');
+if (!process.env.TEST_USER_1_PASSWORD) throw new Error('TEST_USER_1_PASSWORD is not set in .env');
+if (!process.env.TEST_USER_2_EMAIL) throw new Error('TEST_USER_2_EMAIL is not set in .env');
+if (!process.env.TEST_USER_2_PASSWORD) throw new Error('TEST_USER_2_PASSWORD is not set in .env');
 
 
 export default defineConfig({ 
