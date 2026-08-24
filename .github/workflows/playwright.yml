@@ -9,7 +9,7 @@ on:
       tags:
         description: 'Test tags to run(eg. @smoke @regression)'
         required: false
-        default: '@smoke'
+        default: '@regression'
 jobs:
   test:
     timeout-minutes: 60
@@ -43,7 +43,7 @@ jobs:
         distribution: temurin
         java-version: '17' 
     - name: Run Playwright tests
-      run: npx playwright test --grep "${{github.event.inputs.tags || '@smoke'}}" --workers=4
+      run: npx playwright test --grep "${{github.event.inputs.tags || '@regression'}}" --workers=4
 
         
     - uses: actions/upload-artifact@v4
