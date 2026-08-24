@@ -43,7 +43,7 @@ jobs:
         distribution: temurin
         java-version: '17' 
     - name: Run Playwright tests
-      run: npx playwright test --grep "${{github.event.inputs.tags || '@regression'}}" --workers=4
+      run: npx playwright test --workers=4
 
         
     - uses: actions/upload-artifact@v4
