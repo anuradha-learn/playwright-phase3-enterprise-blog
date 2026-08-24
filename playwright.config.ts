@@ -14,14 +14,18 @@ dotenv.config({ quiet: true })
 if (!process.env.BASE_URL) throw new Error('BASE_URL is not set in .env');
 if (!process.env.API_BASE_URL) throw new Error('API_BASE_URL is not set in .env');
 
+
 if (!process.env.TEST_USER_1_EMAIL) throw new Error('TEST_USER_1_EMAIL is not set in .env');
 if (!process.env.TEST_USER_1_PASSWORD) throw new Error('TEST_USER_1_PASSWORD is not set in .env');
 if (!process.env.TEST_USER_2_EMAIL) throw new Error('TEST_USER_2_EMAIL is not set in .env');
 if (!process.env.TEST_USER_2_PASSWORD) throw new Error('TEST_USER_2_PASSWORD is not set in .env');
-
+if (!process.env.TEST_USER_3_EMAIL) throw new Error('TEST_USER_3_EMAIL is not set in .env');
+if (!process.env.TEST_USER_3_PASSWORD) throw new Error('TEST_USER_3_PASSWORD is not set in .env');
+if (!process.env.TEST_USER_4_EMAIL) throw new Error('TEST_USER_4_EMAIL is not set in .env');
+if (!process.env.TEST_USER_4_PASSWORD) throw new Error('TEST_USER_4_PASSWORD is not set in .env');
 
 export default defineConfig({ 
-    workers: process.env.CI ? 1 : undefined,
+    workers: process.env.CI ? 1 : 4,
     fullyParallel: false,
     timeout: 40 * 1000,
     expect: { timeout: 40 * 1000 },
@@ -53,5 +57,26 @@ export default defineConfig({
             },
             dependencies: ['setup'],
         },
+        
+    {
+        name: 'firefox',
+        testDir: './tests',
+        use: {
+            browserName: 'firefox',
+            headless: true,
+            baseURL: process.env.BASE_URL
+        },
+        dependencies: ['setup'],
+    },
+    {
+        name: 'webkit',
+        testDir: './tests',
+        use: {
+            browserName: 'webkit',
+            headless: true,
+            baseURL: process.env.BASE_URL
+        },
+        dependencies: ['setup'],
+    },
     ],
 });

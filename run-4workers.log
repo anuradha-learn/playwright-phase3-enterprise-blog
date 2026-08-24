@@ -1,0 +1,313 @@
+
+Running 29 tests using 4 workers
+
+[1/29] [setup] › helpers/auth.setup.ts:58:6 › authenticate all identities
+[setup] › helpers/auth.setup.ts:58:6 › authenticate all identities
+Auth state saved for user1 to /Users/anuradha/Documents/2026-Courses/PlaywrighCourse/workspace/playwright-phase3-enterprise-blog/auth/storage/user1.json
+
+Auth state saved for user2 to /Users/anuradha/Documents/2026-Courses/PlaywrighCourse/workspace/playwright-phase3-enterprise-blog/auth/storage/user2.json
+
+Auth state saved for user3 to /Users/anuradha/Documents/2026-Courses/PlaywrighCourse/workspace/playwright-phase3-enterprise-blog/auth/storage/user3.json
+
+Auth state saved for user4 to /Users/anuradha/Documents/2026-Courses/PlaywrighCourse/workspace/playwright-phase3-enterprise-blog/auth/storage/user4.json
+
+[2/29] [chromium] › tests/authentication/login.validation.spec.ts:9:10 › Authentication — login validation @authentication › user with invalid credentials sees error message @regression @authentication
+[3/29] [chromium] › tests/authentication/login.validation.spec.ts:14:10 › Authentication — login validation @authentication › user with empty username sees validation error @regression @authentication
+[4/29] [chromium] › tests/authentication/login.validation.spec.ts:19:10 › Authentication — login validation @authentication › user with empty password sees validation error @regression @authentication
+[5/29] [chromium] › tests/authentication/login.validation.spec.ts:24:10 › Authentication — login validation @authentication › locked account displays appropriate message @regression @authentication
+[6/29] [chromium] › tests/orders/orders.validation.spec.ts:7:10 › Orders — order history management @orders › order history shows most recent order first @regression @orders
+[7/29] [chromium] › tests/orders/orders.validation.spec.ts:12:10 › Orders — order history management @orders › order detail shows correct product and price @regression @orders
+[8/29] [chromium] › tests/products/filter.validation.spec.ts:7:10 › Products — price filter validation @products › category filter displays matching products @regression @products
+[9/29] [chromium] › tests/products/filter.validation.spec.ts:12:10 › Products — price filter validation @products › price filter displays products within selected range @regression @products
+[10/29] [chromium] › tests/products/filter.validation.spec.ts:17:10 › Products — price filter validation @products › multiple filters can be applied together @regression @products
+[11/29] [chromium] › tests/products/filter.validation.spec.ts:22:10 › Products — price filter validation @products › removing a filter updates product results @regression @products
+[12/29] [chromium] › tests/products/filter.validation.spec.ts:27:10 › Products — price filter validation @products › clear filters restores complete product list @regression @products
+[13/29] [chromium] › tests/products/search.validation.spec.ts:7:10 › Products — search validation @products › search results contain only products matching keyword @regression @products
+[14/29] [chromium] › tests/products/search.validation.spec.ts:12:10 › Products — search validation @products › search with no results shows empty state message @regression @products
+[15/29] [chromium] › tests/products/search.validation.spec.ts:17:10 › Products — search validation @products › search is case insensitive @regression @products
+[16/29] [chromium] › tests/api/orders.api.spec.ts:20:9 › Orders API —  @api @orders › GET orders returns a valid list
+[17/29] [chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+[18/29] [chromium] › tests/api/products.api.spec.ts:2:5 › GET product list from the store
+[19/29] [chromium] › tests/cart/cart.validation.spec.ts:43:7 › Cart — coupon management @cart › applying valid coupon code applies discount to cart total @regression @cart
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+Parallel 3 -> user4
+
+[chromium] › tests/cart/cart.validation.spec.ts:43:7 › Cart — coupon management @cart › applying valid coupon code applies discount to cart total @regression @cart
+Parallel 2 -> user3
+
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+Fixture Started
+
+Worker : 4
+
+Parallel : 3
+
+Test   : registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+
+Creating BrowserContext...
+
+[chromium] › tests/cart/cart.validation.spec.ts:43:7 › Cart — coupon management @cart › applying valid coupon code applies discount to cart total @regression @cart
+Fixture Started
+
+Worker : 3
+
+Parallel : 2
+
+Test   : applying valid coupon code applies discount to cart total @regression @cart
+
+Creating BrowserContext...
+
+Creating Page...
+
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+Creating Page...
+
+[chromium] › tests/cart/cart.validation.spec.ts:43:7 › Cart — coupon management @cart › applying valid coupon code applies discount to cart total @regression @cart
+Control passed to test...
+
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+Control passed to test...
+
+[20/29] [chromium] › tests/api/products.api.spec.ts:19:5 › GET a single product by id
+[21/29] [chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+[chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+Parallel 0 -> user1
+
+Fixture Started
+
+Worker : 5
+
+Parallel : 0
+
+Test   : registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+
+Creating BrowserContext...
+
+Creating Page...
+
+Control passed to test...
+
+[22/29] [chromium] › tests/products/product.validation.spec.ts:16:9 › Products — product detail new tab @products › registered user views product details in new tab @regression
+[chromium] › tests/products/product.validation.spec.ts:16:9 › Products — product detail new tab @products › registered user views product details in new tab @regression
+Parallel 1 -> user2
+
+Fixture Started
+
+Worker : 6
+
+Parallel : 1
+
+Test   : registered user views product details in new tab @regression
+
+Creating BrowserContext...
+
+Creating Page...
+
+Control passed to test...
+
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[23/29] [chromium] › tests/profile/profile.validation.spec.ts:17:9 › Profile Management  @profile › registered user for Anuradha in Dubai successfully updates billing address @regression
+[chromium] › tests/profile/profile.validation.spec.ts:17:9 › Profile Management  @profile › registered user for Anuradha in Dubai successfully updates billing address @regression
+Fixture Started
+
+Worker : 6
+
+Parallel : 1
+
+Test   : registered user for Anuradha in Dubai successfully updates billing address @regression
+
+Creating BrowserContext...
+
+Creating Page...
+
+Control passed to test...
+
+[chromium] › tests/cart/cart.validation.spec.ts:43:7 › Cart — coupon management @cart › applying valid coupon code applies discount to cart total @regression @cart
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[24/29] [chromium] › tests/cart/cart.validation.spec.ts:56:8 › Cart — coupon management @cart › removing applied coupon restores original cart total @regression @cart
+[25/29] [chromium] › tests/seeds/product-review.seed.spec.ts:4:7 › Product Review Seed Test › should seed product reviews successfully
+[chromium] › tests/seeds/product-review.seed.spec.ts:4:7 › Product Review Seed Test › should seed product reviews successfully
+Fixture Started
+
+Worker : 3
+
+Parallel : 2
+
+Test   : should seed product reviews successfully
+
+Creating BrowserContext...
+
+Creating Page...
+
+Control passed to test...
+
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+Order placed: 6720
+
+[chromium] › tests/seeds/product-review.seed.spec.ts:4:7 › Product Review Seed Test › should seed product reviews successfully
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[26/29] [chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+Fixture Started
+
+Worker : 4
+
+Parallel : 3
+
+Test   : registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+
+Creating BrowserContext...
+
+Creating Page...
+
+Control passed to test...
+
+[chromium] › tests/profile/profile.validation.spec.ts:17:9 › Profile Management  @profile › registered user for Anuradha in Dubai successfully updates billing address @regression
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for fresh and $34 filters purchases product and verifies order @smoke @regression @critical
+Order placed: 6721
+
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[27/29] [chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+[chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+Fixture Started
+
+Worker : 5
+
+Parallel : 0
+
+Test   : registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+
+Creating BrowserContext...
+
+Creating Page...
+
+Control passed to test...
+
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+Order placed: 6722
+
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[28/29] [chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for organic and $25 filters purchases product and verifies order @smoke @regression @critical
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for organic and $25 filters purchases product and verifies order @smoke @regression @critical
+Fixture Started
+
+Worker : 4
+
+Parallel : 3
+
+Test   : registered user searches for organic and $25 filters purchases product and verifies order @smoke @regression @critical
+
+Creating BrowserContext...
+
+Creating Page...
+
+Control passed to test...
+
+[chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+Order placed: 6723
+
+[chromium] › tests/checkout/checkout-hybrid.journey.spec.ts:19:9 › Checkout — UI purchase with API verification @checkout @journey @api › registered user searches for organic and $25 filters purchases product and verifies order @smoke @regression @critical
+Order placed: 6724
+
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for farm and $34 filters purchases product and verifies order @smoke @regression @critical
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+[29/29] [chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for organic and $25 filters purchases product and verifies order @smoke @regression @critical
+[chromium] › tests/checkout/checkout.journey.spec.ts:14:13 › Checkout — registered user purchase journey @checkout @journey › registered user searches for organic and $25 filters purchases product and verifies order @smoke @regression @critical
+Fixture Started
+
+Worker : 5
+
+Parallel : 0
+
+Test   : registered user searches for organic and $25 filters purchases product and verifies order @smoke @regression @critical
+
+Creating BrowserContext...
+
+Creating Page...
+
+Control passed to test...
+
+Order placed: 6725
+
+Control returned from test...
+
+Closing BrowserContext...
+
+BrowserContext Closed
+
+Fixture Finished
+
+  15 skipped
+  14 passed (1.5m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
