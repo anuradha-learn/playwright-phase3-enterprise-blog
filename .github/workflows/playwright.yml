@@ -14,6 +14,12 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    # CHANGED: added, this is what actually creates the two shards
+    strategy:
+      matrix:
+        shardIndex: [1, 2]
+        shardTotal: [2]
+      max-parallel: 1
     env:
       BASE_URL: ${{ secrets.BASE_URL }}
       TEST_USER_1_EMAIL: ${{ secrets.TEST_USER_1_EMAIL }}
@@ -41,44 +47,87 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: temurin
-        java-version: '17' 
+        java-version: '17'
     - name: Run Playwright tests
-      run: npx playwright test --workers=4
+      # CHANGED: --shard added, splits the suite between the two matrix runners
+      run: npx playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }} --workers=4 --grep "${{ github.event.inputs.tags || '@regression' }}"
 
-        
-    - uses: actions/upload-artifact@v4
+    # REMOVED: playwright-report/ upload
+    # This path is stale in CI regardless of sharding, playwright.config.ts
+    # uses the blob reporter in CI, not html, so this folder was never
+    # being populated the way this step assumed.
+
+    # CHANGED: name now includes the shard index, so shard 1 and shard 2
+    # don't overwrite each other's artifact
+    - name: Upload blob report
+      uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: playwright-report
-        path: playwright-report/
+        name: blob-report-${{ matrix.shardIndex }}
+        path: blob-report/
         retention-days: 30
+
     - name: Upload Test Results
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: test-results
+        # CHANGED: shard-indexed, same reason as above
+        name: test-results-${{ matrix.shardIndex }}
         path: test-results/
         retention-days: 30
-    - name: Generate Allure Report
-      if: always()
-      run: npx allure generate allure-results --clean -o allure-report
+
+    # REMOVED: "Generate Allure Report" step
+    # Generating a full report from one shard's partial allure-results
+    # would only ever show half the suite. Report generation now happens
+    # once, in merge-reports, after both shards are done.
+
     - name: Upload Allure Results
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: allure-results
+        # CHANGED: shard-indexed
+        name: allure-results-${{ matrix.shardIndex }}
         path: allure-results/
         retention-days: 30
-    - name: Upload Allure Report
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-       name: allure-report
-       path: allure-report/
-       retention-days: 30
 
-  
+    # REMOVED: "Upload Allure Report" step
+    # Same reasoning as the removed generate step, nothing to upload here
+    # per shard anymore, the real report comes out of merge-reports.
 
-      
+  # NEW: entire job, runs once both shards finish
+  merge-reports:
+    needs: test
+    runs-on: ubuntu-latest
+    if: ${{ !cancelled() }}
+    steps:
+      - uses: actions/checkout@v4
 
+      - name: Merge blob reports into one HTML report
+        uses: actions/download-artifact@v4
+        with:
+          pattern: blob-report-*
+          merge-multiple: true
+          path: all-blob-reports
+      - run: npx playwright merge-reports --reporter=html ./all-blob-reports
 
+      - name: Combine allure-results from both shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: allure-results-*
+          merge-multiple: true
+          path: allure-results
+
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - run: npm install -g allure-commandline
+      - run: allure generate allure-results --clean -o allure-report
+
+      - name: Upload merged Allure report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-report
+          path: allure-report/
+          retention-days: 30
