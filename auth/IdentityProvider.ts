@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 export interface Identity {
   id: string;
   email: string;
@@ -6,11 +9,11 @@ export interface Identity {
 
 export class IdentityProvider {
   load(): Identity[] {
-    return [
-      { id: 'user1', email: process.env.TEST_USER_1_EMAIL!, password: process.env.TEST_USER_1_PASSWORD! },
-      { id: 'user2', email: process.env.TEST_USER_2_EMAIL!, password: process.env.TEST_USER_2_PASSWORD! },
-      { id: 'user3', email: process.env.TEST_USER_3_EMAIL!, password: process.env.TEST_USER_3_PASSWORD! },
-      { id: 'user4', email: process.env.TEST_USER_4_EMAIL!, password: process.env.TEST_USER_4_PASSWORD! },
-    ];
+    const raw = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'users.template.json'), 'utf-8'));
+    return raw.map((u: any) => ({
+      id: u.id,
+      email: process.env[u.emailEnv]!,
+      password: process.env[u.passwordEnv]!,
+    }));
   }
 }

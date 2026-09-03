@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": "wordpress_sec_34d70385d4fc1bd6464bdf3511161392",
-      "value": "anuradha.learn%7C1787731218%7C5gXn7Wm4usvfiQjm1rZf7oai7zFAhct5KHeOAmJfb8E%7C56a47d5cc94ec55f4ec9eaf2322382ba5df5dcbfb8d1054ffb026e14ddb80d6f",
+      "value": "anuradha.learn%7C1788488170%7CWsF2B2jco35sNmt1A69KZtKPxExx0ybFgw1gTJHncUB%7C2d0e1343ac95c3ac4fff5cda1c71dbad5e6f474044208f3cfd886c1094ea3015",
       "domain": "qa-cart.com",
       "path": "/wp-content/plugins",
       "expires": -1,
@@ -12,7 +12,7 @@
     },
     {
       "name": "wordpress_sec_34d70385d4fc1bd6464bdf3511161392",
-      "value": "anuradha.learn%7C1787731218%7C5gXn7Wm4usvfiQjm1rZf7oai7zFAhct5KHeOAmJfb8E%7C56a47d5cc94ec55f4ec9eaf2322382ba5df5dcbfb8d1054ffb026e14ddb80d6f",
+      "value": "anuradha.learn%7C1788488170%7CWsF2B2jco35sNmt1A69KZtKPxExx0ybFgw1gTJHncUB%7C2d0e1343ac95c3ac4fff5cda1c71dbad5e6f474044208f3cfd886c1094ea3015",
       "domain": "qa-cart.com",
       "path": "/wp-admin",
       "expires": -1,
@@ -32,7 +32,7 @@
     },
     {
       "name": "sbjs_current_add",
-      "value": "fd%3D2026-08-24%2008%3A00%3A16%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
+      "value": "fd%3D2026-09-02%2002%3A16%3A09%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
       "domain": ".qa-cart.com",
       "path": "/",
       "expires": -1,
@@ -42,7 +42,7 @@
     },
     {
       "name": "sbjs_first_add",
-      "value": "fd%3D2026-08-24%2008%3A00%3A16%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
+      "value": "fd%3D2026-09-02%2002%3A16%3A09%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
       "domain": ".qa-cart.com",
       "path": "/",
       "expires": -1,
@@ -85,14 +85,14 @@
       "value": "73dd3f25a3bc17db281ac6e8485c0ffc",
       "domain": "qa-cart.com",
       "path": "/",
-      "expires": 1787731218.01494,
+      "expires": 1788488170.61438,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "wordpress_logged_in_34d70385d4fc1bd6464bdf3511161392",
-      "value": "anuradha.learn%7C1787731218%7C5gXn7Wm4usvfiQjm1rZf7oai7zFAhct5KHeOAmJfb8E%7Cba7282290038867ec33cfb9cbf29080f25b391a948299b19840b4edc459148bf",
+      "value": "anuradha.learn%7C1788488170%7CWsF2B2jco35sNmt1A69KZtKPxExx0ybFgw1gTJHncUB%7C556d22e009fb1ae2246c6192ac2f08e5df6f75ae7cfad3fac25a8940a1b608ee",
       "domain": "qa-cart.com",
       "path": "/",
       "expires": -1,
@@ -105,7 +105,7 @@
       "value": "pgs%3D2%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fqa-cart.com%2F",
       "domain": ".qa-cart.com",
       "path": "/",
-      "expires": 1787560218,
+      "expires": 1788317170,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -121,7 +121,7 @@
         },
         {
           "name": "storeApiNonce",
-          "value": "{\"nonce\":\"da951dee9e\",\"timestamp\":1787558418.785}"
+          "value": "{\"nonce\":\"7f198ccc4e\",\"timestamp\":1788315370.939}"
         },
         {
           "name": "storeApiCartData",

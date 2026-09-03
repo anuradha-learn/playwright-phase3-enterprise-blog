@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": "wordpress_sec_34d70385d4fc1bd6464bdf3511161392",
-      "value": "my.learningmilestone%7C1787731213%7CNppWjExqrLisOSs7GQScZcTK8aNOWaTkbAD46VI3Jss%7C2f3f82c2482c291915fc5a2a4a109708adca1def6b96354efef83c38e0d12729",
+      "value": "my.learningmilestone%7C1788488168%7CujtHOh8QC99YjVC9luWa5a8hbIKxcZygQPwaryCfxG6%7Ce7c53551f21e7fe66c02bf5b189d61e5d1438b5990e5a6d6f38d7faa934ee8d6",
       "domain": "qa-cart.com",
       "path": "/wp-content/plugins",
       "expires": -1,
@@ -12,7 +12,7 @@
     },
     {
       "name": "wordpress_sec_34d70385d4fc1bd6464bdf3511161392",
-      "value": "my.learningmilestone%7C1787731213%7CNppWjExqrLisOSs7GQScZcTK8aNOWaTkbAD46VI3Jss%7C2f3f82c2482c291915fc5a2a4a109708adca1def6b96354efef83c38e0d12729",
+      "value": "my.learningmilestone%7C1788488168%7CujtHOh8QC99YjVC9luWa5a8hbIKxcZygQPwaryCfxG6%7Ce7c53551f21e7fe66c02bf5b189d61e5d1438b5990e5a6d6f38d7faa934ee8d6",
       "domain": "qa-cart.com",
       "path": "/wp-admin",
       "expires": -1,
@@ -32,7 +32,7 @@
     },
     {
       "name": "sbjs_current_add",
-      "value": "fd%3D2026-08-24%2008%3A00%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
+      "value": "fd%3D2026-09-02%2002%3A16%3A07%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
       "domain": ".qa-cart.com",
       "path": "/",
       "expires": -1,
@@ -42,7 +42,7 @@
     },
     {
       "name": "sbjs_first_add",
-      "value": "fd%3D2026-08-24%2008%3A00%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
+      "value": "fd%3D2026-09-02%2002%3A16%3A07%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
       "domain": ".qa-cart.com",
       "path": "/",
       "expires": -1,
@@ -85,17 +85,47 @@
       "value": "73dd3f25a3bc17db281ac6e8485c0ffc",
       "domain": "qa-cart.com",
       "path": "/",
-      "expires": 1787731212.866459,
+      "expires": 1788488167.910148,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "wordpress_logged_in_34d70385d4fc1bd6464bdf3511161392",
-      "value": "my.learningmilestone%7C1787731213%7CNppWjExqrLisOSs7GQScZcTK8aNOWaTkbAD46VI3Jss%7C388d997a720a8a889af9ebee979a57926fbdb626df0aad346d318d25c9a2ea98",
+      "value": "my.learningmilestone%7C1788488168%7CujtHOh8QC99YjVC9luWa5a8hbIKxcZygQPwaryCfxG6%7C6a16cd4979dc4abfcc37d50e94832b3dcd6a6b0bbd763f8b45e624325a169fa6",
       "domain": "qa-cart.com",
       "path": "/",
       "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "woocommerce_items_in_cart",
+      "value": "1",
+      "domain": "qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "woocommerce_cart_hash",
+      "value": "3646e6fbb2c9e92486a3fc3a7bd76e0e",
+      "domain": "qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wp_woocommerce_session_34d70385d4fc1bd6464bdf3511161392",
+      "value": "5%7C1788920168%7C1788401768%7C%24generic%24mm7rsw8P9m8HT5N__F0zXgbtS1R8KHYVjdZc-Yk4",
+      "domain": "qa-cart.com",
+      "path": "/",
+      "expires": 1788920168.201673,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
@@ -105,7 +135,7 @@
       "value": "pgs%3D2%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fqa-cart.com%2F",
       "domain": ".qa-cart.com",
       "path": "/",
-      "expires": 1787560213,
+      "expires": 1788317168,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -121,7 +151,7 @@
         },
         {
           "name": "storeApiNonce",
-          "value": "{\"nonce\":\"47d1c1a0f9\",\"timestamp\":1787558413.566}"
+          "value": "{\"nonce\":\"0fa3913581\",\"timestamp\":1788315368.248}"
         },
         {
           "name": "storeApiCartData",
